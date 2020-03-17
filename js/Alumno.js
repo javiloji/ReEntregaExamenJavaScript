@@ -18,11 +18,11 @@ let inicio = () => {
 
     alumno = new Usuario(nombre, apellido1, apellido2, fecha);
 
-    alumno.mostrarUsuario();
+    alumno.mostrarAlumno();
 
 }
 
- Usuario.prototype.mostrarUsuario = function (){
+ Usuario.prototype.mostrarAlumno = function (){
 
     container = document.getElementById("container");
     container.innerHTML = `
