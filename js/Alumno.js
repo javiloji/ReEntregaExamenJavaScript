@@ -17,7 +17,7 @@ let inicio = () => {
     // Creo un nuevo usuario:
 
     alumno = new Alumno(nombre, apellido1, apellido2, fecha);
-
+ 
     alumno.mostrarAlumno();
 
 }
