@@ -1,7 +1,7 @@
 
 // Contructor usado para crear los usuarios
 
-function Usuario(nombre, apellido1, apellido2, fecha) {
+function Alumno(nombre, apellido1, apellido2, fecha) {
     this.nombre = nombre;
     this.apellido1 = apellido1;
     this.apellido2 = apellido2;
@@ -16,13 +16,13 @@ let inicio = () => {
 
     // Creo un nuevo usuario:
 
-    alumno = new Usuario(nombre, apellido1, apellido2, fecha);
+    alumno = new Alumno(nombre, apellido1, apellido2, fecha);
 
     alumno.mostrarAlumno();
 
 }
 
- Usuario.prototype.mostrarAlumno = function (){
+ Alumno.prototype.mostrarAlumno = function (){
 
     container = document.getElementById("container");
     container.innerHTML = `
