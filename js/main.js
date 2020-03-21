@@ -75,7 +75,7 @@
             // Creo la ventana con las preferencias asignadas
             alumno = new Alumno(nombre, apellido1, apellido2, fecha);
     
-            alumno.mostrarAlumno(alumno);
+            alumno.mostrarAlumno();
         }
         else{
             for (const i of document.getElementsByTagName("fieldset")[0].getElementsByTagName("input")) {

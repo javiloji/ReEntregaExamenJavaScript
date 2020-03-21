@@ -10,11 +10,11 @@ function Alumno(nombre, apellido1, apellido2, fecha) {
 
 let alumno;
 
- Alumno.prototype.mostrarAlumno = function (alumno){
+ Alumno.prototype.mostrarAlumno = function (){
 
     let fechaActual = new Date()
 
-    let fechaAlumno = new Date(alumno.fecha.substring(6,10) + "/" + alumno.fecha.substring(3,5) + "/" +  alumno.fecha.substring(0,2));
+    let fechaAlumno = new Date(this.fecha.substring(6,10) + "/" + this.fecha.substring(3,5) + "/" +  this.fecha.substring(0,2));
 
     let resta = fechaActual.getTime() - fechaAlumno.getTime()
 
@@ -29,10 +29,10 @@ let alumno;
                 <body>
                     <div id="container">
                         <h1>Javier Lopera Jiménez</h1>
-                        <p>Nombre del usuario: `+ alumno.nombre + `</p>
-                        <p>Apellido 1: `+ alumno.apellido1 + `</p>
-                        <p>Apellido 2: `+ alumno.apellido2 + `</p>
-                        <p>Fecha de Nacimiento: `+ alumno.fecha + `</p>
+                        <p>Nombre del usuario: `+ this.nombre + `</p>
+                        <p>Apellido 1: `+ this.apellido1 + `</p>
+                        <p>Apellido 2: `+ this.apellido2 + `</p>
+                        <p>Fecha de Nacimiento: `+ this.fecha + `</p>
                         <p>Edad: `+ Math.round(resta/ (1000*60*60*24*365)) + ` años</p>
                     </div>
                 </body>
