@@ -55,36 +55,29 @@
         }
     }
 
+    let nombre;
+    let apellido1;
+    let apellido2;
+    let fecha;
 
     let crearAlumno = () => {
 
-        if (document.getElementById("nombre").value &&
-            document.getElementById("apellido1").value &&
-            document.getElementById("apellido2").value &&
-            comprobarFechaNacimiento(document.getElementById("fecha").value) == "") {
+        nombre = document.getElementById("nombre").value;
+        apellido1 = document.getElementById("apellido1").value;
+        apellido2 = document.getElementById("apellido2").value;
+        fecha = document.getElementById("fecha").value;
+
+        if (nombre &&
+            apellido1 &&
+            apellido2 &&
+            comprobarFechaNacimiento(fecha) == "") {
 
             // Creo la ventana con las preferencias asignadas
-
-            let ventanaUsuario = window.open("", "", "left=400px,top=300px,width=300px,height=200px");
-            ventanaUsuario.document.write(`
-                <html>
-                    <head>
-                        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-                        <title id="titulo">Javier Lopera Jiménez</title>
-                        <script src="js/Alumno.js"></script>
-                    </head>
-                    <body>
-                        <div id="container">
-                        
-                        </div>
-                    </body>
-                </html>
-                `
-            );
-            ventanaUsuario.document.close();
+            alumno = new Alumno(nombre, apellido1, apellido2, fecha);
+    
+            alumno.mostrarAlumno(alumno);
         }
         else{
-
             for (const i of document.getElementsByTagName("fieldset")[0].getElementsByTagName("input")) {
                 if(i.value == ""){
 
